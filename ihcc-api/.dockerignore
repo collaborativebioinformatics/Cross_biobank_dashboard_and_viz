@@ -1,0 +1,8 @@
+.git
+node_modules
+coverage
+dist
+Dockerfile
+.gitignore
+.env
+Jenkinsfile

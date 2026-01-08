@@ -2,7 +2,6 @@
 
 ## CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026)
 
-https://github.com/IHCC-cohorts/ihcc-ui
 
 ### Team: Visualization Tool for Multiple Datasets
 
@@ -31,5 +30,25 @@ flowchart TD
     D --> E[Global Aggregated View]
     E --> F[Visualization & Interpretation]
     F --> G[Documentation & Reproducibility]
+```
+
+
+## How to use
+
+1. First, install npm
+
+2. Then, run the ihcc-api server:
+
+```
+cd ihcc-api
+npm run build
+npm run prod
+```
+
+3. Then, open another terminal, run the ihcc-ui:
+```
+cd ihcc-ui
+cp .schema.env .env
+npm run buildAndServe
 ```
 
