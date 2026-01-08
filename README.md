@@ -14,9 +14,9 @@ This project delivers a unified dashboard for exploring and communicating result
 
 ## Methods
 
-The system is built on Elasticsearch to index clinical metadata. The frontend is a React and TypeScript application that uses the Nivo library for data visualization.
+The system is built on Elasticsearch to index clinical metadata. The frontend is a React and TypeScript. The implementation builds on top of the IHCC UI.
 
-The implementation builds on top of the IHCC UI. For data discovery, the dashboard shows how many features are shared across sites. After training a federated model, evaluation results from each site can be visualized, including confusion matrices and other performance metrics, to provide a clearer view of model performance across cohorts.
+For data discovery, the dashboard shows how many features are shared across sites. After training a federated model, evaluation results from each site can be visualized, including confusion matrices and other performance metrics, to provide a clearer view of model performance across cohorts.
 
 ## Sample Use Case
 
