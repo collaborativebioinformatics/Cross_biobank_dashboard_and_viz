@@ -52,9 +52,8 @@ npm run buildAndServe
 ## Results / Use Case
 
 Our audit of the 14 international nodes revealed that only 120 variables (1.04%) are currently harmonized for immediate federated training. The dashboard successfully visualized this "Harmonization Gap." In a proof of concept study, we used the matrix to select a common feature space for metabolic disease research. This allowed us to filter out 98% of the unharmonized noise and focus on the high quality features that ensure model stability.
-```
-<img width="1470" height="733" alt="Screenshot 2026-01-08 at 12 05 48 PM" src="https://github.com/user-attachments/assets/0fdac687-2fdd-4b23-b377-cce553d814c3" />
-```
+! <img width="2934" height="1448" alt="image" src="https://github.com/user-attachments/assets/5e69f922-5e26-4378-91fc-634eab30af90" />
+
 ## Discussion / Future Directions
 
 The 1.04% readiness index is the current baseline for international federated genomics. This low percentage highlights the difficulty of aligning different biobank standards. Our dashboard provides a way to measure this gap and select the most reliable data for AI. We chose the MIT License so that any biobank can deploy this discovery tool to audit their own internal readiness.
