@@ -65,28 +65,6 @@ npm run buildAndServe
 ```
 
 ## References (BibTeX)
-@article{Roth2022,
-  title={{NVIDIA FLARE}: Federated Learning from Simulation to Real-World},
-  author={Roth, Holger R and others},
-  journal={arXiv preprint arXiv:2210.13291},
-  year={2022}
-}
-
-@article{Bycroft2018,
-  title={The UK Biobank resource with deep phenotyping and genomic data},
-  author={Bycroft, Clare and others},
-  journal={Nature},
-  volume={562},
-  year={2018}
-}
-
-@article{McMahan2017,
-  title={Communication-Efficient Learning of Deep Networks from Decentralized Data},
-  author={McMahan, Brendan and others},
-  booktitle={Artificial Intelligence and Statistics},
-  year={2017}
-}
-
 @article{IHCC2020,
   title={The International HundredK+ Cohorts Consortium: Integrating Large-scale Cohorts for Global Health},
   author={Manolio, Teri A. and Goodhand, Peter and Lowrance, William and others},
@@ -98,3 +76,10 @@ npm run buildAndServe
   doi={10.1016/j.gene.2020.144491}
 }
 
+@article{Roth2022,
+  title={{NVIDIA FLARE}: Federated Learning from Simulation to Real-World},
+  author={Roth, Holger R. and Cheng, Yan and Wen, Yuhong and Yang, Isaac and Xu, Ziyue and Hsieh, Yuan-Ting and others},
+  journal={arXiv preprint arXiv:2210.13291},
+  year={2022},
+  url={https://arxiv.org/abs/2210.13291}
+}
