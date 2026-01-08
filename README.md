@@ -7,7 +7,6 @@
 
 ---
 
-## Introduction
 ## Project introduction (dashboard + biobank visualization)
 
 This project delivers a unified dashboard for exploring and communicating results derived from large-scale biobank data. It is designed to make cross-cohort evidence easier to interpret, compare, and act upon by bringing harmonized metrics, study outputs, and validation summaries into a single, consistent visualization layer. The dashboard supports interactive exploration across biobanks and subpopulations, enabling stakeholders to move from high-level summaries to cohort- and site-specific details without losing methodological context.
@@ -28,9 +27,6 @@ This project is currently under active development. We are in the process of add
 
 ## Discussion / Future Directions
 
-
-
-Furthermore, we are preparing to export selected variables/statistics directly into NVIDIA FLARE configuration files. This will allow for the seamless transition from model training to visualization. By the end of the hackathon, we expect to demonstrate a complete pipeline where discovery leads directly to a visualized dashboard, showing real-time model aggregation, weight updates, and results.
 
 For results, we want to show performance statistics and visualization that are specific to fedarated learning across the biobank. This is separated into model type: classification, clustering, and feature importance, including at the server node and the client nodes.
 
