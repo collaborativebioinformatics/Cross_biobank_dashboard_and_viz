@@ -35,12 +35,23 @@ flowchart TD
 
 ## How to use
 
-1. First, install npm
+1. First, install npm and docker
 
 2. Then, run the ihcc-api server:
 
 ```
 cd ihcc-api
+# run elasticsearch
+# Run Elasticsearch 7.x (compatible with Arranger)
+docker run -d \
+  --name elasticsearch \
+  -p 9200:9200 \
+  -p 9300:9300 \
+  -e "discovery.type=single-node" \
+  -e "xpack.security.enabled=false" \
+  docker.elastic.co/elasticsearch/elasticsearch:7.17.10
+
+# run the api server
 npm run build
 npm run prod
 ```
