@@ -22,7 +22,7 @@ We developed a real-time Discovery Audit Dashboard to address this lack of globa
 How we built it
 
 The system is built on a containerized stack using Docker and Elasticsearch to index clinical metadata. The frontend is a React and TypeScript application that uses the Nivo library for high performance visualization. We integrated the IHCC API to scan 11,511 unique variables across 14 biobank sites. The backend logic calculates a global readiness score based on how many variables exist in at least 50% of the sites. The project is licensed under the MIT License to allow for broad use by biobanks and industry partners.
-
+---
 ## How to use
 
 A researcher launches the dashboard to see the global readiness gap. The search bar allows users to filter the 11,511 variables to find specific clinical tracks like BMI or HbA1c. The intersection matrix displays which of the 14 sites possess harmonized versions of these variables. Users can rank sites by their data density to select the best nodes for a federated job. This setup provides the configuration parameters needed for an NVIDIA FLARE federated learning task.
@@ -58,7 +58,7 @@ npm run buildAndServe
 
 Our audit of the 14 international nodes revealed that only 120 variables (1.04%) are currently harmonized for immediate federated training. The dashboard successfully visualized this "Harmonization Gap." In a proof of concept study, we used the matrix to select a common feature space for metabolic disease research. This allowed us to filter out 98% of the unharmonized noise and focus on the high quality features that ensure model stability.
 ! <img width="2934" height="1448" alt="image" src="https://github.com/user-attachments/assets/5e69f922-5e26-4378-91fc-634eab30af90" />
-
+---
 ## Discussion / Future Directions
 
 The 1.04% readiness index is the current baseline for international federated genomics. This low percentage highlights the difficulty of aligning different biobank standards. Our dashboard provides a way to measure this gap and select the most reliable data for AI. We chose the MIT License so that any biobank can deploy this discovery tool to audit their own internal readiness.
@@ -88,5 +88,16 @@ Furthermore, we are preparing to finalize the end-to-end model training workflow
   author={McMahan, Brendan and others},
   booktitle={Artificial Intelligence and Statistics},
   year={2017}
+}
+
+@article{IHCC2020,
+  title={The International HundredK+ Cohorts Consortium: Integrating Large-scale Cohorts for Global Health},
+  author={Manolio, Teri A. and Goodhand, Peter and Lowrance, William and others},
+  journal={Gene},
+  volume={738},
+  pages={144491},
+  year={2020},
+  publisher={Elsevier},
+  doi={10.1016/j.gene.2020.144491}
 }
 
