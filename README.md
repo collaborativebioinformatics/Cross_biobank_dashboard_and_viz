@@ -34,7 +34,7 @@ Furthermore, we are preparing to export selected variables/statistics directly i
 
 For results, we want to show performance statistics and visualization that are specific to fedarated learning across the biobank. This is separated into model type: classification, clustering, and feature importance, including at the server node and the client nodes.
 
-
+For example, a confusion matrix for classification model that also show the individual cohort True Positive, True Negative, False Positive, False Negative. Graph that show the performance of the federated model on each cohorts such as accuracy and the ROC curve.
 
 ## How to setup the system
 
