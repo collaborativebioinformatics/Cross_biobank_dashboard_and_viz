@@ -7,33 +7,20 @@
 
 ---
 
-## 1. Problem Statement
+## Introduction
 
-In federated learning, biomedical data remains distributed across sites to preserve privacy.  
-However, this makes it difficult to understand:
-
-- What data exists across sites
-- How datasets differ in structure and completeness
-- Whether assumptions made for downstream modeling are valid
-
-**Our goal** is to build a lightweight, reproducible workflow that enables **global visibility through visualization**, without sharing raw data.
-
+Federated learning requires a common feature space to train models across distributed sites. However, clinical data in global biobanks is often unharmonized and siloed. We built the Federated Discovery Explorer to audit these datasets in real time. Our tool identifies the exact intersection of variables across 14 international nodes. This allows researchers to see which clinical features are "Model Ready" before they start training. By focusing on data visibility, we provide a secure way to validate study feasibility without moving raw patient records.
 ---
 
-## 2. High-Level Workflow
+## Methods
 
-```mermaid
-flowchart TD
-    A[Local Data at Each Site] --> B[Local Preprocessing]
-    B --> C[Local Statistics or Model Outputs]
-    C --> D[NVFLARE Federated Aggregation]
-    D --> E[Global Aggregated View]
-    E --> F[Visualization & Interpretation]
-    F --> G[Documentation & Reproducibility]
-```
+How we built it
 
+The system is built on a containerized stack using Docker and Elasticsearch to index clinical metadata. The frontend is a React and TypeScript application that uses the Nivo library for high performance visualization. We integrated the IHCC API to scan 11,511 unique variables across 14 biobank sites. The backend logic calculates a global readiness score based on how many variables exist in at least 50% of the sites. The project is licensed under the MIT License to allow for broad use by biobanks and industry partners.
 
 ## How to use
+
+A researcher launches the dashboard to see the global readiness gap. The search bar allows users to filter the 11,511 variables to find specific clinical tracks like BMI or HbA1c. The intersection matrix displays which of the 14 sites possess harmonized versions of these variables. Users can rank sites by their data density to select the best nodes for a federated job. This setup provides the configuration parameters needed for an NVIDIA FLARE federated learning task.
 
 1. First, install npm and docker
 
@@ -62,4 +49,40 @@ cd ihcc-ui
 cp .schema.env .env
 npm run buildAndServe
 ```
+## Results / Use Case
+
+Our audit of the 14 international nodes revealed that only 120 variables (1.04%) are currently harmonized for immediate federated training. The dashboard successfully visualized this "Harmonization Gap." In a proof of concept study, we used the matrix to select a common feature space for metabolic disease research. This allowed us to filter out 98% of the unharmonized noise and focus on the high quality features that ensure model stability.
+```
+<img width="1470" height="733" alt="Screenshot 2026-01-08 at 12 05 48 PM" src="https://github.com/user-attachments/assets/0fdac687-2fdd-4b23-b377-cce553d814c3" />
+```
+## Discussion / Future Directions
+
+The 1.04% readiness index is the current baseline for international federated genomics. This low percentage highlights the difficulty of aligning different biobank standards. Our dashboard provides a way to measure this gap and select the most reliable data for AI. We chose the MIT License so that any biobank can deploy this discovery tool to audit their own internal readiness.
+
+This project is currently under active development. We are in the process of adding more informative graphs, including site density comparisons and multimodal data distributions. A major focus for the final stage is the integration of automated semantic mapping using large language models to suggest synonyms for unharmonized clinical terms. This is expected to increase the readiness index from 1.04% to over 5% by bridging the gap between different site terminologies.
+
+Furthermore, we are preparing to finalize the end-to-end model training workflow. We are adding functionality to export selected "Ready" variables directly into NVIDIA FLARE configuration files. This will allow for the seamless transition from variable discovery to active model training. By the end of the hackathon, we expect to demonstrate a complete pipeline where discovery leads directly to a verified federated training session across all 14 nodes, showing real-time model aggregation and weight updates.
+
+## References (BibTeX)
+@article{Roth2022,
+  title={{NVIDIA FLARE}: Federated Learning from Simulation to Real-World},
+  author={Roth, Holger R and others},
+  journal={arXiv preprint arXiv:2210.13291},
+  year={2022}
+}
+
+@article{Bycroft2018,
+  title={The UK Biobank resource with deep phenotyping and genomic data},
+  author={Bycroft, Clare and others},
+  journal={Nature},
+  volume={562},
+  year={2018}
+}
+
+@article{McMahan2017,
+  title={Communication-Efficient Learning of Deep Networks from Decentralized Data},
+  author={McMahan, Brendan and others},
+  booktitle={Artificial Intelligence and Statistics},
+  year={2017}
+}
 
