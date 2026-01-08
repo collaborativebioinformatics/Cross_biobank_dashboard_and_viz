@@ -8,8 +8,11 @@
 ---
 
 ## Introduction
+## Project introduction (dashboard + biobank visualization)
 
-Federated learning requires a common feature space to train models across distributed sites, yet clinical data in global biobanks remains unharmonized and siloed. We built the Federated Discovery Explorer to provide real-time, global visibility into these datasets without compromising participant privacy.
+This project delivers a unified dashboard for exploring and communicating results derived from large-scale biobank data. It is designed to make cross-cohort evidence easier to interpret, compare, and act on by bringing harmonized metrics, study outputs, and validation summaries into a single, consistent visualization layer. The dashboard supports interactive exploration across biobanks and subpopulations, enabling stakeholders to move from high-level summaries to cohort- and site-specific details without losing methodological context.
+
+A central goal is to showcase how multiple teams are using biobank data to advance medical science—improving reproducibility, accelerating hypothesis testing, and translating population-scale evidence into actionable insights. The platform emphasizes transparent provenance (what data, what method, what cohort), side-by-side comparisons of model and study performance, and standardized evaluation views (e.g., predictive performance, calibration, fairness, and error analysis). By consolidating these outputs and presenting them in a shared analytical interface, the dashboard helps align efforts across teams, highlight high-impact findings, and identify where additional data, validation, or methodological innovation can most effectively “move the needle” in biomedical research.
 
 We developed a real-time Discovery Audit Dashboard to address this lack of global visibility without compromising participant privacy. By scanning clinical metadata across 14 international nodes, our tool quantifies the "Readiness Index" of distributed datasets. This approach allows researchers to identify a surgical "Shared Language" of common features, transforming siloed biobank data into a verified configuration for federated machine learning. 
 
