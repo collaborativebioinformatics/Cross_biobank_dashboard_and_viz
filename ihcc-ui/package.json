@@ -1,0 +1,59 @@
+{
+  "name": "ui",
+  "version": "2.0.2",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.7.17",
+    "@arranger/components": "^2.19.4",
+    "@nivo/bar": "0.67.0",
+    "@nivo/core": "0.67.0",
+    "@nivo/pie": "0.67.0",
+    "@nivo/sankey": "0.67.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/url-join": "^4.0.0",
+    "axios": "^1.13.2",
+    "dotenv": "^16.0.0",
+    "graphql": "^16.8.0",
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-grid-system": "^6.3.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "4.0.3",
+    "serve": "^14.2.5",
+    "typescript": "~3.7.2",
+    "url-join": "^4.0.1"
+  },
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve": "serve -s ./build",
+    "buildAndServe": "npm run build && npm run serve"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
