@@ -2,6 +2,8 @@
 
 ## CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026)
 
+https://github.com/IHCC-cohorts/ihcc-ui
+
 ### Team: Visualization Tool for Multiple Datasets
 
 ---
