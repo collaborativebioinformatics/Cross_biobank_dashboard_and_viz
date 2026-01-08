@@ -10,6 +10,7 @@
 ## Project introduction (dashboard + biobank visualization)
 
 This project delivers a unified dashboard for exploring and communicating results derived from large-scale biobank data. It is designed to make cross-cohort evidence easier to interpret, compare, and act upon by bringing harmonized metrics, study outputs, and validation summaries into a single, consistent visualization layer. The dashboard supports interactive exploration across biobanks and subpopulations, enabling stakeholders to move from high-level summaries to cohort- and site-specific details without losing methodological context.
+![Dashboard](./Dashboard.PNG)
 
 ## Methods
 
