@@ -20,16 +20,21 @@ The system is built on a containerized stack using Docker and Elasticsearch to i
 
 Our audit of the 14 international nodes revealed that only 120 variables (1.04%) are currently harmonized for immediate federated training. The dashboard successfully visualized this "Harmonization Gap." In a proof of concept study, we used the matrix to select a common feature space for metabolic disease research. This allowed us to filter out 98% of the unharmonized noise and focus on the high quality features that ensure model stability.
 ! <img width="2934" height="1448" alt="image" src="https://github.com/user-attachments/assets/5e69f922-5e26-4378-91fc-634eab30af90" />
+The 1.04% readiness index is the current baseline for international federated genomics. This low percentage highlights the difficulty of aligning different biobank standards. Our dashboard provides a way to measure this gap and select the most reliable data for AI. We chose the MIT License so that any biobank can deploy this discovery tool to audit their own internal readiness.
+
+This project is currently under active development. We are in the process of adding more informative graphs, including site density comparisons and multimodal data distributions. A major focus for the final stage is the integration of automated semantic mapping using large language models to suggest synonyms for unharmonized clinical terms. This is expected to increase the readiness index from 1.04% to over 5% by bridging the gap between different site terminologies.
 
 ---
 
 ## Discussion / Future Directions
 
-The 1.04% readiness index is the current baseline for international federated genomics. This low percentage highlights the difficulty of aligning different biobank standards. Our dashboard provides a way to measure this gap and select the most reliable data for AI. We chose the MIT License so that any biobank can deploy this discovery tool to audit their own internal readiness.
 
-This project is currently under active development. We are in the process of adding more informative graphs, including site density comparisons and multimodal data distributions. A major focus for the final stage is the integration of automated semantic mapping using large language models to suggest synonyms for unharmonized clinical terms. This is expected to increase the readiness index from 1.04% to over 5% by bridging the gap between different site terminologies.
 
-Furthermore, we are preparing to finalize the end-to-end model training workflow. We are adding functionality to export selected "Ready" variables directly into NVIDIA FLARE configuration files. This will allow for the seamless transition from variable discovery to active model training. By the end of the hackathon, we expect to demonstrate a complete pipeline where discovery leads directly to a verified federated training session across all 14 nodes, showing real-time model aggregation and weight updates.
+Furthermore, we are preparing to export selected variables/statistics directly into NVIDIA FLARE configuration files. This will allow for the seamless transition from model training to visualization. By the end of the hackathon, we expect to demonstrate a complete pipeline where discovery leads directly to a visualized dashboard, showing real-time model aggregation, weight updates, and results.
+
+For results, we want to show performance statistics and visualization that are specific to fedarated learning across the biobank. This is separated into model type: classification, clustering, and feature importance, including at the server node and the client nodes.
+
+
 
 ## How to setup the system
 
