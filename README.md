@@ -10,7 +10,7 @@
 ## Introduction
 
 Federated learning requires a common feature space to train models across distributed sites. However, clinical data in global biobanks is often unharmonized and siloed. We built the Federated Discovery Explorer to audit these datasets in real time. Our tool identifies the exact intersection of variables across 14 international nodes. This allows researchers to see which clinical features are "Model Ready" before they start training. By focusing on data visibility, we provide a secure way to validate study feasibility without moving raw patient records.
----
+
 
 ## Methods
 
