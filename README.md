@@ -16,11 +16,7 @@ This project delivers a unified dashboard for exploring and communicating result
 
 The system is built on a containerized stack using Docker and Elasticsearch to index clinical metadata. The frontend is a React and TypeScript application that uses the Nivo library for data visualization. The implementation builds on top of the IHCC UI. For data discovery, the dashboard shows how many features are shared across sites. After training a federated model, evaluation results from each site can be visualized, including confusion matrices and other performance metrics, to provide a clearer view of model performance across cohorts.
 
-## How to use
-
-A researcher interacts with the dashboard using the search bar to filter among 11,511 variables and identify specific clinical traits such as BMI or HbA1c. The intersection matrix shows which of the 14 sites possess harmonized versions of these variables. Additionally, the researcher can view the model’s confusion matrix. Using these views, they can assess both data quality and the performance of the trained model across sites.
-
-## Results / Use Case
+## Sample Use Case
 
 Our audit of the 14 international nodes revealed that only 120 variables (1.04%) are currently harmonized for immediate federated training. The dashboard successfully visualized this "Harmonization Gap." In a proof of concept study, we used the matrix to select a common feature space for metabolic disease research. This allowed us to filter out 98% of the unharmonized noise and focus on the high quality features that ensure model stability.
 ! <img width="2934" height="1448" alt="image" src="https://github.com/user-attachments/assets/5e69f922-5e26-4378-91fc-634eab30af90" />
