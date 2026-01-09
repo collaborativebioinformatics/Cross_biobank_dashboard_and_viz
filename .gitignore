@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.env
+package-lock.json
+package.json
+craco.config.js
+ihcc-ui/src/echarts-for-react.d.ts
+ihcc-ui/src/react-dom-override.d.ts

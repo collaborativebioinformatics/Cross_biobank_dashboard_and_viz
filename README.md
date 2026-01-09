@@ -1,7 +1,7 @@
-# Federated Visualization of Biomedical Datasets
+# FedViz: Federated Biomedical Cohort Visualization
 
-## CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026)
-
+## CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026) 
+CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026) Empowering international biobank collaboration through transparent data harmonization and federated readiness auditing.
 
 ### Team: Visualization Tool for Multiple Datasets
 
@@ -11,6 +11,34 @@
 
 This project delivers a unified dashboard for exploring and communicating results derived from large-scale biobank data. It is designed to make cross-cohort evidence easier to interpret, compare, and act upon by bringing harmonized metrics, study outputs, and validation summaries into a single, consistent visualization layer. The dashboard supports interactive exploration across biobanks and subpopulations, enabling stakeholders to move from high-level summaries to cohort- and site-specific details without losing methodological context.
 ![Dashboard](./Dashboard.PNG)
+
+## 🧩 The Challenge: The "Siloed Data" Bottleneck
+In global biomedical research, data harmonization is the primary friction point. While consortia like the International HundredK+ Cohorts Consortium (IHCC) aim to integrate large-scale data, variables across biobanks are often non-identical, poorly mapped, or siloed behind privacy barriers.
+FedViz provides a professional visualization layer that:
+Audits Harmonization Gaps: Identifies which variables are "Federated-Ready" versus site-specific.
+Measures Readiness: Calculates a global Readiness Index to assess the feasible feature space for Federated Learning (FL).
+Visualizes Lineage: Maps raw cohort metadata to standardized domains (e.g., GECKO Ontology) via interactive Sankey diagrams.
+
+## 🖼️ Dashboard Architecture
+The FedViz dashboard is designed for clinical research credibility and actionable insight.
+
+1. Federated Lineage (Sankey Chart)
+Visualizes the flow of data from 14 International Cohorts → Individual Variables → Scientific Domains (Demographics, Clinical, Lifestyle, etc.). This tracks how diverse site data converges into a unified training set.
+
+2. Harmonization Surface (Presence Matrix)
+A high-density heatmap revealing the "Surface Area" of the federation. It identifies "Feature Bundles" that travel together across sites, essential for selecting robust FL model features.
+
+3. Interactive KPIs & Readiness
+Readiness Index: Currently 1.04%—revealing that of 11,511 unique variables, only a fraction are immediately compatible across all nodes.
+
+Global Registry: A searchable index of all federated variables with real-time statistics (Mean, Count, Null-rates) derived from site metadata.
+
+🏗️ Technical Stack
+Frontend: React, TypeScript, Recharts, and Apache ECharts for high-performance scientific visualization.
+
+Backend: Python + Elasticsearch (7.17.x) for fast metadata indexing and search retrieval.
+
+ML Integration: NVIDIA FLARE (NVFlare) for federated training simulations and cross-site evaluation metrics.
 
 ## Methods
 
@@ -57,29 +85,35 @@ npm run build
 npm run prod
 ```
 
-3. Then, open another terminal, run the ihcc-ui:
+3. Load your data (in a new terminal):
+```
+# Install Python dependencies
+pip install -r ihcc-api/scripts/requirements.txt
+
+# Import your CSV file
+python ihcc-api/scripts/import_csv.py your_cohorts.csv
+
+# Or try the example data
+python ihcc-api/scripts/import_csv.py ihcc-api/scripts/example_cohorts.csv
+```
+
+See [DATA_IMPORT_GUIDE.md](./DATA_IMPORT_GUIDE.md) for CSV format details.
+
+4. Then, open another terminal, run the ihcc-ui:
 ```
 cd ihcc-ui
 cp .schema.env .env
 npm run buildAndServe
 ```
+## 📜 License & Citation
+Released under the MIT License.
 
-## References (BibTeX)
-@article{IHCC2020,
-  title={The International HundredK+ Cohorts Consortium: Integrating Large-scale Cohorts for Global Health},
-  author={Manolio, Teri A. and Goodhand, Peter and Lowrance, William and others},
-  journal={Gene},
-  volume={738},
-  pages={144491},
-  year={2020},
-  publisher={Elsevier},
-  doi={10.1016/j.gene.2020.144491}
-}
+Manolio, T. A., et al. (2020). The International HundredK+ Cohorts Consortium: Integrating Large-scale Cohorts for Global Health. Gene, 738, 144491.
 
-@article{Roth2022,
-  title={{NVIDIA FLARE}: Federated Learning from Simulation to Real-World},
-  author={Roth, Holger R. and Cheng, Yan and Wen, Yuhong and Yang, Isaac and Xu, Ziyue and Hsieh, Yuan-Ting and others},
-  journal={arXiv preprint arXiv:2210.13291},
-  year={2022},
-  url={https://arxiv.org/abs/2210.13291}
-}
+## FedViz — Bridging the gap between raw biobank heterogeneity and robust federated model training.
+
+## Contributors
+
+- Hieu (Henry) Ngo
+- Yuan-Ting Hsieh
+- Aditya Kumar Karna

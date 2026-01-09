@@ -1,0 +1,6 @@
+cohort_name,countries,current_enrollment,target_enrollment,pi_lead,website,dictionary_harmonized,irb_approved_data_sharing,biospecimens,genomic_data,demographic_data,phenotypic_clinical_data,biosample_sample_types
+Example Genomic Cohort,United States|Canada,50000,100000,Dr. Jane Smith,https://example-cohort.org,true,Yes,Yes,Yes,Yes,Yes,Blood|Saliva|Tissue
+Cardiovascular Health Study,United Kingdom|Germany|France,25000,50000,Prof. John Doe,https://cvhealth.org,false,Partial,Yes,No,Yes,Yes,Blood|Urine
+Asian Population Study,China|Japan|Korea,75000,100000,Dr. Li Wang,https://asian-pop-study.org,true,Yes,Yes,Yes,Yes,Yes,Blood|DNA
+Diabetes Research Cohort,United States,30000,40000,Dr. Sarah Johnson,https://diabetes-cohort.org,true,Yes,Yes,Yes,Yes,Yes,Blood|Plasma
+
