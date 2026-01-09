@@ -178,23 +178,23 @@ A visual analytics dashboard for cross-site Biobanks with mock/demo data to supp
 
 ### Tabs
 1. **Atlas**
-![Dashboard Screenshot](./Dashboard.png)
+![Dashboard Screenshot](./Dashboard.PNG)
 
 2. **Classification Model Visualization / Performance**
    - Confusion-matrix quadrant pies (TP/FP/TN/FN)
    - Bar chart of cohort accuracy (derived from TP/FP/TN/FN)
    - ROC curves per cohort (synthetic/mock ROC points supported)
-![Dashboard Screenshot](./Classification1.png)
-![Dashboard1 Screenshot](./Classification2.png)
-![Dashboard2 Screenshot](./Classification3.png)
+![Dashboard Screenshot](./Classification1.PNG)
+![Dashboard1 Screenshot](./Classification2.PNG)
+![Dashboard2 Screenshot](./Clasification3.PNG)
 3. **Clustering Visualization / Performance**
    - Cohort-specific centroids per cluster
    - Global centroids as mean across cohorts
    - Cluster ranges (ellipses / dispersion visual)
    - Pie charts: cohort contribution by sample size (`n`) and centroid distributions
-![Dashboard Screenshot](./Clustering1.png)
-![Dashboard1 Screenshot](./Clustering2.png)
-![Dashboard2 Screenshot](./Clustering3.png)
+![Dashboard Screenshot](./Clustering1.PNG)
+![Dashboard1 Screenshot](./Clustering2.PNG)
+![Dashboard2 Screenshot](./Clustering3.PNG)
 ---
 ## 🚧 Future Directions
 
