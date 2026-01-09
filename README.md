@@ -177,6 +177,8 @@ This "Harmonization Gap" is why federated learning projects struggle:
 ✅ Allowing researchers to select the 1.04% high-quality feature space for immediate FL pilots  
 ✅ Providing a roadmap for expanding harmonization to 5%+ through semantic mapping (future work)
 
+<img width="1245" height="424" alt="Screenshot 2026-01-09 at 3 30 41 PM" src="https://github.com/user-attachments/assets/d45c81b8-3e54-4c4d-a8a2-4dc6cefd68d1" />
+
 **A Python-based layer ingests IHCC-style metadata CSVs (tracking 50,000+ participants per site) and transforms them into a standardized Federated Matrix.**
 ```
 import rdflib
