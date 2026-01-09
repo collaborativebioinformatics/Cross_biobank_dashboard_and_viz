@@ -248,7 +248,7 @@ A visual analytics dashboard for cross-site Biobanks with mock/demo data to supp
 
 ### Tabs
 1. **Atlas**
-![Dashboard Screenshot](./Dashboard.PNG)
+![Dashboard Screenshot](./Dashboard.png)
 
 2. **Classification Model Visualization / Performance**
    - Confusion-matrix quadrant pies (TP/FP/TN/FN)
