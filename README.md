@@ -1,4 +1,6 @@
 # FedViz: Federated Biomedical Cohort Visualization
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/bd170d99-4652-4da3-a96e-050865b293fb" />
+
 
 ## CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026) 
 CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026) Empowering international biobank collaboration through transparent data harmonization and federated readiness auditing.
