@@ -97,3 +97,8 @@ npm run buildAndServe
   url={https://arxiv.org/abs/2210.13291}
 }
 
+## Contributors
+
+- Hieu (Henry) Ngo
+- Yuan-ting Hsieh
+- Aditya Kumar Karna
