@@ -192,7 +192,9 @@ A visual analytics dashboard for cross-site Biobanks with mock/demo data to supp
    - Global centroids as mean across cohorts
    - Cluster ranges (ellipses / dispersion visual)
    - Pie charts: cohort contribution by sample size (`n`) and centroid distributions
-
+![Dashboard Screenshot](./Clustering1.png)
+![Dashboard1 Screenshot](./Clustering2.png)
+![Dashboard2 Screenshot](./Clustering3.png)
 ---
 ## 🚧 Future Directions
 
