@@ -179,7 +179,7 @@ This "Harmonization Gap" is why federated learning projects struggle:
 
 <img width="1245" height="424" alt="Screenshot 2026-01-09 at 3 30 41 PM" src="https://github.com/user-attachments/assets/d45c81b8-3e54-4c4d-a8a2-4dc6cefd68d1" />
 
-<img width="1232" height="459" alt="Screenshot 2026-01-09 at 3 32 18 PM" src="https://github.com/user-attachments/assets/dbc8f4a9-f2e2-4158-b7d1-bb8ed07c0a1a" />
+<img width="1233" height="465" alt="Screenshot 2026-01-09 at 3 33 06 PM" src="https://github.com/user-attachments/assets/4afc0c67-3bb5-4f22-888a-e9d7f616d808" />
 
 **A Python-based layer ingests IHCC-style metadata CSVs (tracking 50,000+ participants per site) and transforms them into a standardized Federated Matrix.**
 ```
