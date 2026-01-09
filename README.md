@@ -164,6 +164,76 @@ This "Harmonization Gap" is why federated learning projects struggle:
 ✅ Allowing researchers to select the 1.04% high-quality feature space for immediate FL pilots  
 ✅ Providing a roadmap for expanding harmonization to 5%+ through semantic mapping (future work)
 
+**A Python-based layer ingests IHCC-style metadata CSVs (tracking 50,000+ participants per site) and transforms them into a standardized Federated Matrix.**
+```
+import rdflib
+import os
+import json
+from collections import defaultdict
+
+def find_repo_path():
+    for root, dirs, files in os.walk('/content'):
+        if 'data_dictionaries' in dirs:
+            return os.path.join(root, 'data_dictionaries')
+    return None
+
+def get_federated_matrix(data_dir):
+    variable_map = defaultdict(list)
+    cohort_stats = {}
+
+    print(f"📂 Processing files in: {data_dir}")
+    
+    files = [f for f in os.listdir(data_dir) if f.endswith(".owl")]
+    if not files:
+        print("⚠️ No .owl files found in the directory.")
+        return None
+
+    for file in files:
+        cohort_id = file.replace(".owl", "").upper()
+        path = os.path.join(data_dir, file)
+        
+        g = rdflib.Graph()
+        try:
+            g.parse(path, format="xml")
+            labels = set()
+            for s, p, o in g.triples((None, rdflib.RDFS.label, None)):
+                var_name = str(o).strip()
+                labels.add(var_name)
+                variable_map[var_name].append(cohort_id)
+            
+            cohort_stats[cohort_id] = len(labels)
+            print(f"✔️ Synced {cohort_id} ({len(labels)} variables)")
+        except Exception as parse_error:
+            print(f"❌ Failed to parse {file}: {parse_error}")
+
+    threshold = len(cohort_stats) / 2
+    common_vars = {k: v for k, v in variable_map.items() if len(v) >= threshold}
+
+    output = {
+        "summary": {
+            "total_cohorts": len(cohort_stats),
+            "total_unique_variables": len(variable_map),
+            "common_variables_count": len(common_vars),
+            "readiness_percentage": round((len(common_vars)/len(variable_map)*100), 2) if variable_map else 0
+        },
+        "matrix": variable_map,
+        "cohort_sizes": cohort_stats
+    }
+    return output
+
+repo_path = find_repo_path()
+
+if repo_path:
+    results = get_federated_matrix(repo_path)
+    if results:
+        with open("federated_matrix.json", "w") as f:
+            json.dump(results, f, indent=4)
+        print("\n🚀 SUCCESS! 'federated_matrix.json' is ready for the JS team.")
+        print(f"📊 Summary: Found {results['summary']['common_variables_count']} shared variables across {results['summary']['total_cohorts']} sites.")
+else:
+    print("❌ ERROR: Could not find 'data_dictionaries' folder. Did you run 'git clone' in this session?")
+```
+
 ---
 # Cross-Site Biobanks Dashboard & Visualization
 
