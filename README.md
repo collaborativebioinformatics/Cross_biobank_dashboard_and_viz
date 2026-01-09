@@ -100,5 +100,5 @@ npm run buildAndServe
 ## Contributors
 
 - Hieu (Henry) Ngo
-- Yuan-ting Hsieh
+- Yuan-Ting Hsieh
 - Aditya Kumar Karna
