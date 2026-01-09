@@ -61,36 +61,7 @@ Armed with discovery insights, researchers can:
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     Biobank Network                              │
-├─────────────┬─────────────┬─────────────┬─────────────────────┤
-│   Site 1    │   Site 2    │   Site 3    │   ... Site N         │
-│  (Sweden)   │   (USA)     │   (Japan)   │                      │
-│             │             │             │                      │
-│  Local CSV  │  Local CSV  │  Local CSV  │  Local Databases    │
-│     ↓       │     ↓       │     ↓       │        ↓            │
-│ Extractor   │ Extractor   │ Extractor   │   Extractor         │
-│     ↓       │     ↓       │     ↓       │        ↓            │
-│  Metadata   │  Metadata   │  Metadata   │   Metadata          │
-└─────┬───────┴─────┬───────┴─────┬───────┴────────┬────────────┘
-      │             │             │                │
-      └─────────────┴─────────────┴────────────────┘
-                          ↓
-              ┌───────────────────────┐
-              │   NVFlare Server      │
-              │  (Federated Catalog)  │
-              └───────────┬───────────┘
-                          ↓
-              ┌───────────────────────┐
-              │  Elasticsearch Index  │
-              └───────────┬───────────┘
-                          ↓
-              ┌───────────────────────┐
-              │   FedViz Dashboard    │
-              │  (React + TypeScript) │
-              └───────────────────────┘
-```
+[architecture](./architecture.png)
 
 **Tech Stack:**
 - **Federated Orchestration**: NVIDIA FLARE (NVFlare)
@@ -193,22 +164,6 @@ This "Harmonization Gap" is why federated learning projects struggle:
 ✅ Enabling targeted harmonization efforts where they matter most  
 ✅ Allowing researchers to select the 1.04% high-quality feature space for immediate FL pilots  
 ✅ Providing a roadmap for expanding harmonization to 5%+ through semantic mapping (future work)
-
----
-
-## 🎯 Impact: Enabling Federated Learning Collaboration
-
-### Before FedViz
-❌ Sites operate in silos, unaware of each other's data  
-❌ FL projects launch blindly, discover incompatibilities mid-training  
-❌ Months wasted on failed harmonization attempts  
-❌ No systematic assessment of network readiness
-
-### After FedViz
-✅ **Transparent discovery**: See what data exists across the network  
-✅ **Informed planning**: Select compatible sites before FL training  
-✅ **Targeted harmonization**: Focus efforts on high-value features  
-✅ **Accelerated collaboration**: Reduce setup time from months to days
 
 ---
 
