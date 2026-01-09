@@ -159,7 +159,7 @@ python fedstats_job.py -n 4 -o stats.json
 
 # View results
 cat /tmp/nvflare/simulation/cohort_discovery/server/cohort_catalog.json
-cat /tmp/nvflare/simulation/patient_stats/server/statistics/patient_stats.json
+cat /tmp/nvflare/simulation/patient_stats/server/simulate_job/statistics/patient_stats.json
 ```
 
 ## Requirements
