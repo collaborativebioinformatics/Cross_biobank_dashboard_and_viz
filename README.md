@@ -61,7 +61,7 @@ Armed with discovery insights, researchers can:
 
 ## 🏗️ Architecture
 
-[architecture](./architecture.png)
+![architecture](./architecture.png)
 
 **Tech Stack:**
 - **Federated Orchestration**: NVIDIA FLARE (NVFlare)
