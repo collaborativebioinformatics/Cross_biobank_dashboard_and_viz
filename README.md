@@ -57,13 +57,26 @@ npm run build
 npm run prod
 ```
 
-3. Then, open another terminal, run the ihcc-ui:
+3. Load your data (in a new terminal):
+```
+# Install Python dependencies
+pip install -r ihcc-api/scripts/requirements.txt
+
+# Import your CSV file
+python ihcc-api/scripts/import_csv.py your_cohorts.csv
+
+# Or try the example data
+python ihcc-api/scripts/import_csv.py ihcc-api/scripts/example_cohorts.csv
+```
+
+See [DATA_IMPORT_GUIDE.md](./DATA_IMPORT_GUIDE.md) for CSV format details.
+
+4. Then, open another terminal, run the ihcc-ui:
 ```
 cd ihcc-ui
 cp .schema.env .env
 npm run buildAndServe
 ```
-
 ## References (BibTeX)
 @article{IHCC2020,
   title={The International HundredK+ Cohorts Consortium: Integrating Large-scale Cohorts for Global Health},
@@ -83,3 +96,4 @@ npm run buildAndServe
   year={2022},
   url={https://arxiv.org/abs/2210.13291}
 }
+
