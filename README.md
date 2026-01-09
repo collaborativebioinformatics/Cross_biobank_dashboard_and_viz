@@ -165,36 +165,35 @@ This "Harmonization Gap" is why federated learning projects struggle:
 ✅ Providing a roadmap for expanding harmonization to 5%+ through semantic mapping (future work)
 
 ---
+# Cross-Site Biobanks Dashboard & Visualization
 
-## 🔬 Use Case Example: Metabolic Disease Study
+A visual analytics dashboard for cross-site biomedical cohorts with mock/demo data to support:
+- Atlas view
+- Data exploration
+- Classification model evaluation (confusion matrix, cohort accuracies, ROC curves)
+- Clustering visualization/performance (cohort vs global centroids, cluster ranges, cohort/cluster distributions)
 
-**Research Question:** Train a federated model to predict diabetes risk across international cohorts.
+## Key Features
+A visual analytics dashboard for cross-site Biobanks with mock/demo data to support:
 
-**Using FedViz:**
+### Tabs
+1. **Atlas**
+![Dashboard Screenshot](./Dashboard.png)
 
-1. **Discovery Phase**:
-   - Query dashboard for sites with diabetes diagnosis data
-   - Identify 6/8 sites have `has_diabetes` field
-   - Check sample sizes: 15K to 345K patients per site
-   
-2. **Readiness Check**:
-   - View federated statistics: diabetes prevalence ranges 8-12% across sites (comparable)
-   - Age distributions align (mean 45-52 years)
-   - All 6 sites have required covariates (age, BMI, genomic data)
-
-3. **Harmonization Gap Analysis**:
-   - Matrix shows 42 shared clinical features across these 6 sites
-   - Identifies 3 key features with naming mismatches requiring alignment
-   
-4. **FL Project Launch**:
-   - Select 6 compatible sites for federated training
-   - Use harmonized 42-feature set
-   - Proceed with confidence, knowing data landscape upfront
-
-**Result:** Project completes in 2 weeks instead of 6 months of trial-and-error.
+2. **Classification Model Visualization / Performance**
+   - Confusion-matrix quadrant pies (TP/FP/TN/FN)
+   - Bar chart of cohort accuracy (derived from TP/FP/TN/FN)
+   - ROC curves per cohort (synthetic/mock ROC points supported)
+![Dashboard Screenshot](./Classification1.png)
+![Dashboard1 Screenshot](./Classification2.png)
+![Dashboard2 Screenshot](./Classification3.png)
+3. **Clustering Visualization / Performance**
+   - Cohort-specific centroids per cluster
+   - Global centroids as mean across cohorts
+   - Cluster ranges (ellipses / dispersion visual)
+   - Pie charts: cohort contribution by sample size (`n`) and centroid distributions
 
 ---
-
 ## 🚧 Future Directions
 
 ### Automated Semantic Harmonization
