@@ -7,7 +7,7 @@ Two workflows demonstrating federated data sharing without exposing raw patient 
 ```bash
 # 1. Generate mock biobank data
 python setup_sites.py
-# Creates data at /tmp/nvflare/cross_bio_bank/site-{1,2,3,4}/
+# Creates data at /tmp/nvflare/cross_bio_bank/site-{1..8}/
 
 # 2. Run cohort discovery (builds catalog)
 cd discovery && python job.py && cd ..

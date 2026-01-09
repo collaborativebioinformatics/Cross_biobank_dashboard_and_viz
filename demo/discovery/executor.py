@@ -102,14 +102,28 @@ class CohortMetadataExtractor(Executor):
         
         genomic_count = sum(1 for p in patients if p.get("has_genomic_data") == "Yes")
         
+        # Site name mapping (matches setup_sites.py)
+        site_names = {
+            "site-1": ("Nordic Biobank", "Sweden"),
+            "site-2": ("CHoP Biobank", "United States"),
+            "site-3": ("Penn Biobank", "United States"),
+            "site-4": ("Japan Biobank", "Japan"),
+            "site-5": ("AWS Open Data Program", "Global"),
+            "site-6": ("CanPath", "Canada"),
+            "site-7": ("Sage NF1 data", "United States"),
+            "site-8": ("QIAGEN", "Germany"),
+        }
+        
+        cohort_name, country = site_names.get(site_name, (f"Site {site_name}", "Unknown"))
+        
         # Build cohort metadata
         cohort_data = {
-            "cohort_name": f"Site {site_name}",
+            "cohort_name": cohort_name,
             "description": "Biobank cohort",
             "dictionary_harmonized": "Yes",
             "website": f"https://{site_name}.example.org",
             "pi_lead": "Dr. Site Lead",
-            "countries": ["Various"],
+            "countries": [country],
             "irb_approved_data_sharing": "76-100%",
             "enrollment_period": "2010:-",
             "current_enrollment": total,

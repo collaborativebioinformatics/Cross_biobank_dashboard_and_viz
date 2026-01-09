@@ -11,7 +11,7 @@ from nvflare.recipe.sim_env import SimEnv
 
 def main():
     parser = argparse.ArgumentParser(description="Federated Cohort Discovery")
-    parser.add_argument("-n", "--n_clients", type=int, default=4)
+    parser.add_argument("-n", "--n_clients", type=int, default=8)
     parser.add_argument("-d", "--data_root_dir", type=str, default="/tmp/nvflare/cross_bio_bank")
     parser.add_argument("-o", "--output_path", type=str, default="cohort_catalog")
     args = parser.parse_args()

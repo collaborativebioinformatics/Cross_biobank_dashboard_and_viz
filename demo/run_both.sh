@@ -9,7 +9,7 @@ echo ""
 # Setup
 echo "1. Generating mock biobank data..."
 python setup_sites.py
-echo "✓ Generated 4 biobank sites"
+echo "✓ Generated 8 biobank sites"
 echo ""
 
 # Discovery workflow

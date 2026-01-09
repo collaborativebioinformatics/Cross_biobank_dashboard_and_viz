@@ -12,10 +12,14 @@ from pathlib import Path
 DATA_ROOT = Path("/tmp/nvflare/cross_bio_bank")
 
 SITES = {
-    "site-1": {"name": "Canadian Genomics", "country": "Canada", "patients": 50000},
-    "site-2": {"name": "UK Biobank", "country": "United Kingdom", "patients": 75000},
-    "site-3": {"name": "Asian Health", "country": "Japan", "patients": 60000},
-    "site-4": {"name": "US Cardiovascular", "country": "United States", "patients": 100000},
+    "site-1": {"name": "Nordic Biobank", "country": "Sweden", "patients": 80000},
+    "site-2": {"name": "CHoP Biobank", "country": "United States", "patients": 130000},
+    "site-3": {"name": "Penn Biobank", "country": "United States", "patients": 95000},
+    "site-4": {"name": "Japan Biobank", "country": "Japan", "patients": 120000},
+    "site-5": {"name": "AWS Open Data Program", "country": "Global", "patients": 250000},
+    "site-6": {"name": "CanPath", "country": "Canada", "patients": 345000},
+    "site-7": {"name": "Sage NF1 data", "country": "United States", "patients": 15000},
+    "site-8": {"name": "QIAGEN", "country": "Germany", "patients": 180000},
 }
 
 def generate_csv(site_id, site_info, num_samples=1000):
