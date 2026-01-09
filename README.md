@@ -149,9 +149,22 @@ npm run buildAndServe
 
 <img width="1229" height="486" alt="Harmonization Gap" src="https://github.com/user-attachments/assets/f7fcd94e-aff0-455c-b63d-da88064ec1c7" />
 
-Our audit of **14 international biobank nodes** revealed:
+Our audit of 14 international biobank nodes reveals the critical bottleneck in global federated research. By indexing 11,511 unique variables, we quantified the "Federated Surface Area" currently available for multi-site modeling.
+```
+Metric Value
+Total Unique Variables - "11,511"
+Common Variables (≥8 Cohorts) - 120
+Global Readiness Index - 1.04%
+```
+**The Problem: Structural Heterogeneity**
+Massive Sparsity: 98.96% of detected variables are cohort-specific and cannot be used for cross-site training without extensive manual mapping or semantic alignment.
 
-🔴 **Only 1.04% of variables are currently harmonized** (120 out of 11,511 unique variables)
+Unique Silos: 98.7% (11,366) of variables exist in only a single cohort, categorized as "Unique" silos.
+
+**Terminology Gaps:** Clinical concepts are fragmented across inconsistent institutional registries; for example, a reference variable like **"sleep history"** may have 6747 exact matches but only 42 domain-expanded semantic match across the network.
+<img width="1242" height="686" alt="Screenshot 2026-01-09 at 3 22 37 PM" src="https://github.com/user-attachments/assets/9683105c-cc80-401b-b208-b593f1e2dfc4" />
+
+Inconsistent Metadata: Variable coverage varies drastically by site, with some biobanks like PLCO contributing nearly 2,500 harmonized variables, while others like SAPRIN contribute fewer than 250.
 
 This "Harmonization Gap" is why federated learning projects struggle:
 - 98.96% of data cannot be used for cross-site training without additional mapping
