@@ -14,13 +14,6 @@ CMU × NVIDIA Federated Learning Hackathon (Jan 7–9, 2026) Empowering internat
 This project delivers a unified dashboard for exploring and communicating results derived from large-scale biobank data. It is designed to make cross-cohort evidence easier to interpret, compare, and act upon by bringing harmonized metrics, study outputs, and validation summaries into a single, consistent visualization layer. The dashboard supports interactive exploration across biobanks and subpopulations, enabling stakeholders to move from high-level summaries to cohort- and site-specific details without losing methodological context.
 ![Dashboard](./Dashboard.PNG)
 
-## 🧩 The Challenge: The "Siloed Data" Bottleneck
-In global biomedical research, data harmonization is the primary friction point. While consortia like the International HundredK+ Cohorts Consortium (IHCC) aim to integrate large-scale data, variables across biobanks are often non-identical, poorly mapped, or siloed behind privacy barriers.
-FedViz provides a professional visualization layer that:
-Audits Harmonization Gaps: Identifies which variables are "Federated-Ready" versus site-specific.
-Measures Readiness: Calculates a global Readiness Index to assess the feasible feature space for Federated Learning (FL).
-Visualizes Lineage: Maps raw cohort metadata to standardized domains (e.g., GECKO Ontology) via interactive Sankey diagrams.
-
 ## 🖼️ Dashboard Architecture
 The FedViz dashboard is designed for clinical research credibility and actionable insight.
 
