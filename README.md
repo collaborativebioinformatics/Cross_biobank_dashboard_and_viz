@@ -32,12 +32,16 @@ Each site runs a local data extractor that:
 - Computes **aggregated cohort metadata** (cohort size, available data types, disease coverage, biospecimen types)
 - Sends only the metadata summary to the central catalog
 
+**Privacy preserved:** Raw patient data never leaves the site.
+
 ### 2️⃣ **Federated Statistics Computation**
 Using **NVIDIA FLARE**, sites compute cross-site statistics:
 - Mean age, standard deviation
 - Disease prevalence (hypertension, diabetes)
 - Genomic data availability
 - Data quality metrics
+
+**Privacy preserved:** Only aggregated statistics shared, not individual records.
 
 ### 3️⃣ **Interactive Dashboard Visualization**
 Centralized dashboard displays:
