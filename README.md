@@ -142,7 +142,6 @@ npm run buildAndServe
 
 ### Step 5: Explore at http://localhost:3000/
 - **Atlas Tab**: Browse discovered cohorts, filter by country, disease, data types
-- **Federated Statistics Tab**: View aggregated cross-site analytics
 
 ---
 
